@@ -47,7 +47,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![frequency_of_classes_training_set](/Users/VM/Documents/Udacity/SDCND/CarND-Traffic-Sign-Classifier-Project/examples/frequency_of_classes_training_set.png)
+![](images/frequency_of_classes_training_set.png)
 
 ### Design and Test a Model Architecture
 
@@ -57,7 +57,7 @@ As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+
 
 As a last step, I normalized the image data because ...
 
