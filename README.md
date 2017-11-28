@@ -96,22 +96,13 @@ To train the model, I used Adam optimizes and 0.001 learning rate. The batch siz
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 94.3
+* test set accuracy of 0.8
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-
+I have chosen LeNet to see how it performs on this particular dataset. Some improvements in termns of optmizer were made, allowing to obtaine validation accuracy over 94%. It is planned to develop this further outside the project to achieve 98%-99% accuracy rate.
 
 ### Test a Model on New Images
 
@@ -119,41 +110,41 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![](images/german_signs.png)
 
-The first image might be difficult to classify because ...
+I have taken first 5 signs (4 from the top row and 1 one on the left from the bottom row).
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
-|     Image     |  Prediction   |
-| :-----------: | :-----------: |
-|   Stop Sign   |   Stop sign   |
-|    U-turn     |    U-turn     |
-|     Yield     |     Yield     |
-|   100 km/h    |  Bumpy Road   |
-| Slippery Road | Slippery Road |
+|     Image                              |  Prediction             |
+| :-------------------------------------:| :----------------------:|
+|   Speed limit - 60km/h                 |   Speed limit - 60km/h  |
+|   Right of way at next intersection    |   Beware of ice/snow    |
+|   Speed limit - 60km/h                 |   Speed limit - 60km/h  |
+|   Priority Road                        |   Prioirity Road        |
+|   Keep right                           |   Keep right            |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. One sign was misslassified as it looks quite similar - perhaps this could be improved with a better model
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For all the images, the model is quite sure about the classes.
 
-| Probability |  Prediction   |
-| :---------: | :-----------: |
-|     .60     |   Stop sign   |
-|     .20     |    U-turn     |
-|     .05     |     Yield     |
-|     .04     |  Bumpy Road   |
-|     .01     | Slippery Road |
+TopKV2(values=array([[  9.95141864e-01,   3.74515867e-03,   9.77508142e-04, 7.03172846e-05,   1.69389696e-05],
+                     [  9.99998927e-01,   1.07050573e-06,   1.11568066e-09, 1.03386699e-09,   8.80592734e-12],
+                     [  9.83231425e-01,   1.65259019e-02,   7.47432496e-05, 6.12501899e-05,   3.83184597e-05],
+                     [  9.99923825e-01,   5.96928003e-05,   1.64904268e-05, 4.62732030e-09,   8.34820268e-10],
+                     [  1.00000000e+00,   0.00000000e+00,   0.00000000e+00, 0.00000000e+00,   0.00000000e+00]])
+                     indices=array([[ 3, 16,  5, 32,  1],
+                                    [30, 11, 21, 23,  7],
+                                    [ 1,  4,  8,  2, 12],
+                                    [12, 17, 10, 15, 32],
+                                    [38,  0,  1,  2,  3]], dtype=int32))
 
 
-For the second image ... 
 
-### (Optional) Visualizing the Neural 
