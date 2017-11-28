@@ -133,18 +133,4 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For all the images, the model is quite sure about the classes.
-
-TopKV2(values=array([[  9.95141864e-01,   3.74515867e-03,   9.77508142e-04, 7.03172846e-05,   1.69389696e-05],
-                     [  9.99998927e-01,   1.07050573e-06,   1.11568066e-09, 1.03386699e-09,   8.80592734e-12],
-                     [  9.83231425e-01,   1.65259019e-02,   7.47432496e-05, 6.12501899e-05,   3.83184597e-05],
-                     [  9.99923825e-01,   5.96928003e-05,   1.64904268e-05, 4.62732030e-09,   8.34820268e-10],
-                     [  1.00000000e+00,   0.00000000e+00,   0.00000000e+00, 0.00000000e+00,   0.00000000e+00]])
-                     indices=array([[ 3, 16,  5, 32,  1],
-                                    [30, 11, 21, 23,  7],
-                                    [ 1,  4,  8,  2, 12],
-                                    [12, 17, 10, 15, 32],
-                                    [38,  0,  1,  2,  3]], dtype=int32))
-
-
-
+For all the images, the model is quite sure about the classes. In all cases the top class probability was in excess of 0.98-0.99. See Jupyter notebook for more details.
