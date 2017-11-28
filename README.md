@@ -1,6 +1,5 @@
 # Udacity-Self-Driving-Car-Traffic-Signs-Classifier-Project
-My project pipeline for the Udacity Self-Driving-Car Nanodegree program's Project 2 - Traffic Sign Classifier
-#Self-Driving Car Engineer Nanodegree 
+My project pipeline for the Udacity Self-Driving-Car ND Project 2 - Traffic Sign Classifier
 
 ** Deep Learning **
 
@@ -45,7 +44,7 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is histogram showing the frequency of the traffic sign classes in the training set.
 
 ![](images/frequency_of_classes_training_set.png)
 
